@@ -5,9 +5,13 @@
 - Resolución típica ADC: 12 bits (0–4095)
 - Canal(es): A4 usa 1 canal; A5 usa 2 canales (s1, s2)
 
-## Frecuencia de muestreo
+## Frecuencia de muestreo (Hz)
 - U1A4: 20 Hz (delay 50 ms)
 - U1A5: 10 Hz (PERIOD_MS = 100 ms)
+
+## Estructura del mensaje
+- U1A4 (CSV): seq,s
+- U1A5 (CSV): t_ms,s1,s2
 
 ## Canal de telemetría y estructura del mensaje
 - Canal: USB Serial
