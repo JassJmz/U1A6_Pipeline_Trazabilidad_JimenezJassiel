@@ -1,0 +1,95 @@
+[
+    {
+        "id": "a7278b5f59ad457d",
+        "type": "tab",
+        "label": "A4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fcc18eca6f7d738f",
+        "type": "serial in",
+        "z": "a7278b5f59ad457d",
+        "name": "gg",
+        "serial": "",
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "1bdbf6d23428ae00",
+                "427f4d3e2187ae6e"
+            ]
+        ]
+    },
+    {
+        "id": "427f4d3e2187ae6e",
+        "type": "file",
+        "z": "a7278b5f59ad457d",
+        "name": "",
+        "filename": "/Users/jassieljmz/Documents/ITSRLL/8vo Semestre ITSRLL/Ciberfisica y IA/Unidad I/Practica 2 A4/telemetria_u1a4.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 490,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1bdbf6d23428ae00",
+        "type": "debug",
+        "z": "a7278b5f59ad457d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e45bf20e85676666",
+        "type": "inject",
+        "z": "a7278b5f59ad457d",
+        "name": "Encabezado del CSV",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "seq,s",
+        "payloadType": "str",
+        "x": 160,
+        "y": 500,
+        "wires": [
+            [
+                "427f4d3e2187ae6e"
+            ]
+        ]
+    },
+    {
+        "id": "b91a4f2c3cee6647",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-node-serialport": "2.0.3"
+        }
+    }
+]
